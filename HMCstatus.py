@@ -32,22 +32,22 @@ col1, col2, col3 = st.columns(3)
 with col1:
     for i in range(19):
         if (statusYn(getStatus(cntrList[i]))):
-            st.write("{} :smiley:".format(cntrList[i]))
+            st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
-            st.write("{} :rage:".format(cntrList[i]))
+            st.write("{} ::red_circle:".format(cntrList[i]))
 
 with col2:
     for i in range(20,39):
         if (statusYn(getStatus(cntrList[i]))):
-            st.write("{} :smiley:".format(cntrList[i]))
+            st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
-            st.write("{} :rage:".format(cntrList[i]))
+            st.write("{} ::red_circle:".format(cntrList[i]))
 
 with col3:
        for i in range(40,len(cntrList)):
         if (statusYn(getStatus(cntrList[i]))):
-            st.write("{} :smiley:".format(cntrList[i]))
+            st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
-            st.write("{} :rage:".format(cntrList[i]))
+            st.write("{} ::red_circle:".format(cntrList[i]))
 
 st.success(body="Check Done!")
