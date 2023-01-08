@@ -1,0 +1,5 @@
+name: hmcapps
+dependencies:
+  - numpy
+  - pandas
+  - bs4
