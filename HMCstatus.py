@@ -28,21 +28,8 @@ def getStatus(cntr):
         num = 200
     except:
         num = -1
-    # print(title)
-    # if 'Help Me Choose' in title:
-    #     # print('in!')
-    #     num = 200
-    # num = r.status_code
     
     return num
-
-cnt = 1
-
-# for i in range(len(cntrList)):
-#     if (statusYn(getStatus(cntrList[i]))):
-#         st.write("{} :smiley:".format(cntrList[i]))
-#     else:
-#         st.write("{} :rage:".format(cntrList[i]))
 
 col1, col2, col3 = st.columns(3)
 
