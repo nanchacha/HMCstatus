@@ -34,21 +34,21 @@ def getStatus(cntr):
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    for i in range(19):
+    for i in range(20):
         if (statusYn(getStatus(cntrList[i]))):
             st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
             st.write("{} :red_circle:".format(cntrList[i]))
 
 with col2:
-    for i in range(20,39):
+    for i in range(21,40):
         if (statusYn(getStatus(cntrList[i]))):
             st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
             st.write("{} :red_circle:".format(cntrList[i]))
 
 with col3:
-       for i in range(40,len(cntrList)):
+       for i in range(41,len(cntrList)):
         if (statusYn(getStatus(cntrList[i]))):
             st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
