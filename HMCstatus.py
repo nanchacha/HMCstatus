@@ -1,11 +1,15 @@
 import requests
 import streamlit as st
 from bs4 import BeautifulSoup
+import time
+from selenium.webdriver.common.by import By
 
 st.markdown("<h1 style='text-align: center; color: #F95700;'>HELP ME CHOOSE STATUS</h1>", unsafe_allow_html=True)
 
-cntrList = ['UK', 'ID', 'MY', 'EG', 'HU', 'LEVANT', 'ES', 'LEVANT_AR', 'HK_EN', 'HK', 'RO', 'SE', 'NO', 'DK', 'FI', 'AT', 'CH', 'VN', 'CH_FR', 'TW', 'IT', 'DE', 'PH', 'BR', 'CZ', 'SK', 
- 'FR', 'N_AFRICA', 'PT', 'KZ_KZ', 'KZ_RU', 'AU', 'ZA', 'EE', 'LV', 'LT', 'CA', 'PY', 'AR', 'SI', 'HR', 'AE', 'TH', 'NL', 'BE', 'BE_FR', 'SG', 'CL', 'CO', 'MX', 'CA_FR', 'PL', 'UA', 'PK', 'PE', 'AE_AR', 'RU', 'UY', 'GR', 'SA', 'SA_EN']
+cntrList = ['GR', 'UK', 'ID', 'MY', 'EG', 'HU', 'LEVANT', 'ES', 'LEVANT_AR', 'HK_EN', 'HK', 'RO', 'SE', 'NO', 'DK', 'FI', 'AT', 'CH', 'VN', 'CH_FR', 'TW', 'IT', 'DE', 'PH', 'BR', 'CZ', 'SK', 
+ 'FR', 'N_AFRICA', 'PT', 'KZ_KZ', 'KZ_RU', 'AU', 'ZA', 'EE', 'LV', 'LT', 'CA', 'PY', 'AR', 'SI', 'HR', 'AE', 'TH', 'NL', 'BE', 'BE_FR', 'SG', 'CL', 'CO', 'MX', 'CA_FR', 'PL', 'UA', 'PK', 'PE', 'AE_AR', 'RU', 'UY', 'SA', 'SA_EN']
+
+# cntrList = ['GR']
 
 # cntrList = ['UK']
 
@@ -21,10 +25,16 @@ def getStatus(cntr):
     num = -1
     html = r.content
     soup = BeautifulSoup(html, 'html.parser')
-        
     elem = soup.find('div', attrs={'class' : 'find-my-tv__header'})
+    if (cntr == 'GR'):
+        print(soup)
+        # find the element by its text using the xpath
+        tv_element = soup.find(text='Η ΔΙΚΗ ΣΑΣ SAMSUNG TV')
+        print(tv_element)
     try : 
         title = elem.text.split('Depending')[0]
+        if (cntr == 'GR'):
+            num = 200
         num = 200
     except:
         num = -1
@@ -32,6 +42,8 @@ def getStatus(cntr):
     return num
 
 col1, col2, col3 = st.columns(3)
+
+
 
 with col1:
     for i in range(20):
