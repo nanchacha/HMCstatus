@@ -2,7 +2,6 @@ import requests
 import streamlit as st
 from bs4 import BeautifulSoup
 import time
-from selenium.webdriver.common.by import By
 
 st.markdown("<h1 style='text-align: center; color: #F95700;'>HELP ME CHOOSE STATUS</h1>", unsafe_allow_html=True)
 
