@@ -5,7 +5,7 @@ import time
 
 st.markdown("<h1 style='text-align: center; color: #F95700;'>HELP ME CHOOSE STATUS</h1>", unsafe_allow_html=True)
 
-cntrList = ['TW', 'GR', 'UK', 'ID', 'MY', 'EG', 'HU', 'LEVANT', 'ES', 'LEVANT_AR', 'HK_EN', 'HK', 'RO', 'SE', 'NO', 'DK', 'FI', 'AT', 'CH', 'VN', 'CH_FR', 'TW', 'IT', 'DE', 'PH', 'BR', 'CZ', 'SK', 
+cntrList = ['GR', 'UK', 'ID', 'MY', 'EG', 'HU', 'LEVANT', 'ES', 'LEVANT_AR', 'HK_EN', 'HK', 'RO', 'SE', 'NO', 'DK', 'FI', 'AT', 'CH', 'VN', 'CH_FR', 'TW', 'IT', 'DE', 'PH', 'BR', 'CZ', 'SK', 
  'FR', 'N_AFRICA', 'PT', 'KZ_KZ', 'KZ_RU', 'AU', 'ZA', 'EE', 'LV', 'LT', 'CA', 'PY', 'AR', 'SI', 'HR', 'AE', 'TH', 'NL', 'BE', 'BE_FR', 'SG', 'CL', 'CO', 'MX', 'CA_FR', 'PL', 'UA', 'PK', 'PE', 'AE_AR', 'RU', 'UY', 'SA', 'SA_EN']
 
 # cntrList = ['GR']
