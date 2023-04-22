@@ -37,26 +37,31 @@ def getStatus(cntr):
     
     return num
 
+
+div = round(len(cntrList)/3)
+sectionA = div
+sectionB = div*2
+sectionC = len(cntrList)
+
+
 col1, col2, col3 = st.columns(3)
 
-
-
 with col1:
-    for i in range(20):
+    for i in range(sectionA):
         if (statusYn(getStatus(cntrList[i]))):
             st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
             st.write("{} :red_circle:".format(cntrList[i]))
 
 with col2:
-    for i in range(20,40):
+    for i in range(sectionA,sectionB):
         if (statusYn(getStatus(cntrList[i]))):
             st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
             st.write("{} :red_circle:".format(cntrList[i]))
 
 with col3:
-       for i in range(40,len(cntrList)):
+       for i in range(sectionB,len(cntrList)):
         if (statusYn(getStatus(cntrList[i]))):
             st.write("{} :white_check_mark:".format(cntrList[i]))
         else:
