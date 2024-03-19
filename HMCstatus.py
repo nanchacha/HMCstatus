@@ -26,12 +26,13 @@ def getStatus(cntr):
     html = r.content
     soup = BeautifulSoup(html, 'html.parser')
     elem = soup.find('div', attrs={'class' : 'find-my-tv__header'})
-    if (cntr=='GR'):
-        num = 200
-        return num
+    # if (cntr=='GR'):
+    #     num = 200
+    #     return num
     try : 
         title = elem.text.split('Depending')[0]
-        num = 200
+        if title :
+            num = 200
     except:
         num = -1
     
